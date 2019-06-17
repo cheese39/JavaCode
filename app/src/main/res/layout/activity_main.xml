@@ -38,7 +38,7 @@
                 android:paddingRight="10dp"
                 android:textSize="20sp"
                 android:id="@+id/btn_clear"
-                android:background="@drawable/white_btn_selector"
+                android:background="#223344"
                 android:text="C" />
 
             <Button
@@ -50,7 +50,7 @@
                 android:paddingRight="10dp"
                 android:textSize="20sp"
                 android:id="@+id/btn_del"
-                android:background="@drawable/white_btn_selector"
+                android:background="#223344"
                 android:text="DEL" />
 
             <Button
@@ -62,7 +62,7 @@
                 android:paddingRight="10dp"
                 android:textSize="20sp"
                 android:id="@+id/btn_divide"
-                android:background="@drawable/white_btn_selector"
+                android:background="#223344"
                 android:text="÷" />
 
             <Button
@@ -74,7 +74,7 @@
                 android:paddingRight="10dp"
                 android:textSize="20sp"
                 android:id="@+id/btn_multiply"
-                android:background="@drawable/white_btn_selector"
+                android:background="#223344"
                 android:text="×" />
         </LinearLayout>
 
@@ -93,7 +93,7 @@
                 android:paddingRight="10dp"
                 android:textSize="20sp"
                 android:id="@+id/btn_7"
-                android:background="@drawable/white_btn_selector"
+                android:background="#223344"
                 android:text="7" />
 
             <Button
@@ -105,7 +105,7 @@
                 android:paddingRight="10dp"
                 android:textSize="20sp"
                 android:id="@+id/btn_8"
-                android:background="@drawable/white_btn_selector"
+                android:background="#223344"
                 android:text="8" />
 
             <Button
@@ -117,7 +117,7 @@
                 android:paddingRight="10dp"
                 android:textSize="20sp"
                 android:id="@+id/btn_9"
-                android:background="@drawable/white_btn_selector"
+                android:background="#223344"
                 android:text="9" />
 
             <Button
@@ -129,7 +129,7 @@
                 android:paddingRight="10dp"
                 android:textSize="20sp"
                 android:id="@+id/btn_minus"
-                android:background="@drawable/white_btn_selector"
+                android:background="#223344"
                 android:text="－" />
         </LinearLayout>
 
@@ -148,7 +148,7 @@
                 android:paddingRight="10dp"
                 android:textSize="20sp"
                 android:id="@+id/btn_4"
-                android:background="@drawable/white_btn_selector"
+                android:background="#223344"
                 android:text="4" />
 
             <Button
@@ -160,7 +160,7 @@
                 android:paddingRight="10dp"
                 android:textSize="20sp"
                 android:id="@+id/btn_5"
-                android:background="@drawable/white_btn_selector"
+                android:background="#223344"
                 android:text="5" />
 
             <Button
@@ -172,7 +172,7 @@
                 android:paddingRight="10dp"
                 android:textSize="20sp"
                 android:id="@+id/btn_6"
-                android:background="@drawable/white_btn_selector"
+                android:background="#223344"
                 android:text="6" />
 
             <Button
@@ -184,7 +184,7 @@
                 android:paddingRight="10dp"
                 android:textSize="20sp"
                 android:id="@+id/btn_pluse"
-                android:background="@drawable/white_btn_selector"
+                android:background="#223344"
                 android:text="＋" />
         </LinearLayout>
 
@@ -213,7 +213,7 @@
                         android:paddingRight="10dp"
                         android:textSize="20sp"
                         android:id="@+id/btn_1"
-                        android:background="@drawable/white_btn_selector"
+                        android:background="#223344"
                         android:text="1" />
 
                     <Button
@@ -225,7 +225,7 @@
                         android:paddingRight="10dp"
                         android:textSize="20sp"
                         android:id="@+id/btn_2"
-                        android:background="@drawable/white_btn_selector"
+                        android:background="#223344"
                         android:text="2" />
 
                     <Button
@@ -237,7 +237,7 @@
                         android:paddingRight="10dp"
                         android:textSize="20sp"
                         android:id="@+id/btn_3"
-                        android:background="@drawable/white_btn_selector"
+                        android:background="#223344"
                         android:text="3" />
                 </LinearLayout>
 
@@ -255,7 +255,7 @@
                         android:paddingRight="10dp"
                         android:textSize="20sp"
                         android:id="@+id/btn_0"
-                        android:background="@drawable/white_btn_selector"
+                        android:background="#223344"
                         android:text="0" />
 
                     <Button
@@ -267,7 +267,7 @@
                         android:paddingRight="10dp"
                         android:text="."
                         android:id="@+id/btn_point"
-                        android:background="@drawable/white_btn_selector"
+                        android:background="#223344"
                         android:textSize="20sp"/>
                 </LinearLayout>
             </LinearLayout>
@@ -281,7 +281,7 @@
                 android:paddingRight="10dp"
                 android:textSize="20sp"
                 android:id="@+id/btn_equal"
-                android:background="@drawable/white_btn_selector"
+                android:background="#223344"
                 android:text="=" />
         </LinearLayout>
     </LinearLayout>

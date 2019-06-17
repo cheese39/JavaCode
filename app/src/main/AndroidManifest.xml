@@ -20,7 +20,7 @@
         <service
             android:name=".service.AutoUpdate"
             android:enabled="true"
-            android:exported="true"></service>
+            android:exported="true" />
 
         <activity android:name=".WeatherActivity">
             <intent-filter>

@@ -76,7 +76,6 @@ public class ChooseAreaFragment extends Fragment {
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
-        queryProvinces();
         listView.setOnItemClickListener((parent, view, position, id) -> {
             if (currentLevel == LEVEL_PROVINCE) {
                 selectedProince = provinceList.get(position);
@@ -101,6 +100,7 @@ public class ChooseAreaFragment extends Fragment {
                 weatherActivity.closeDrawers();
             }
         });
+        queryProvinces();
     }
 
     /*

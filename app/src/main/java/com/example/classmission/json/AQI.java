@@ -1,7 +1,11 @@
 package com.example.classmission.json;
 
-public class AQI {
+import com.google.gson.annotations.SerializedName;
 
+public class AQI {
+    public String status;
+
+    @SerializedName("air_now_city")
     public AQICity city;
 
     public class AQICity {

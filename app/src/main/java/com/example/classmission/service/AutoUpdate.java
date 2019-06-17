@@ -8,18 +8,11 @@ import android.content.SharedPreferences;
 import android.os.IBinder;
 import android.os.SystemClock;
 import android.preference.PreferenceManager;
-import android.widget.Toast;
+import android.util.Log;
 
-import com.example.classmission.WeatherActivity;
-import com.example.classmission.json.Weather;
-import com.example.classmission.util.HttpUtil;
+import com.example.classmission.json.Now;
 import com.example.classmission.util.JsonUtil;
-
-import java.io.IOException;
-
-import okhttp3.Call;
-import okhttp3.Callback;
-import okhttp3.Response;
+import com.example.classmission.util.RequestUtil;
 
 public class AutoUpdate extends Service {
     public AutoUpdate() {
@@ -33,7 +26,7 @@ public class AutoUpdate extends Service {
     @Override
     public int onStartCommand(Intent intent, int flags, int startId) {
         updateWeather();
-        AlarmManager manager = (AlarmManager)getSystemService(ALARM_SERVICE);
+        AlarmManager manager = (AlarmManager) getSystemService(ALARM_SERVICE);
         int anHour = 8 * 60 * 60 * 1000;
         long triggerAtTime = SystemClock.elapsedRealtime() + anHour;
         Intent i = new Intent(this, AutoUpdate.class);
@@ -48,34 +41,18 @@ public class AutoUpdate extends Service {
      */
     private void updateWeather() {
         SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this);
-        String weatherString = prefs.getString("weather", null);
-        if (weatherString != null) {
-            //有缓存时直接解析天气数据
-            Weather weather = JsonUtil.handleWeatherResponse(weatherString);
-            assert weather != null;
-            String weatherId = weather.basic.weatherId;
-            String weatherUrl = "http://guolin.tech/api/weather?cityid="
-                    + weatherId + "&key=bc0418b57b2d4918819d3974ac1285d9";
-            HttpUtil.sendOkHttpRequest(weatherUrl, new Callback() {
-                @Override
-                public void onFailure(Call call, IOException e) {
-                    e.printStackTrace();
-                }
-
-                @Override
-                public void onResponse(Call call, Response response) throws IOException {
-                    final String responseText = response.body().string();
-                    System.out.println(responseText);
-                    final Weather weather = JsonUtil.handleWeatherResponse(responseText);
-                    if (weather != null && "ok".equals(weather.status)) {
-                        SharedPreferences.Editor editor = PreferenceManager
-                                .getDefaultSharedPreferences(AutoUpdate.this)
-                                .edit();
-                        editor.putString("weather", responseText);
-                        editor.apply();
-                    }
-                }
-            });
+        String nowString = prefs.getString("now", null);
+        SharedPreferences.Editor editor = PreferenceManager
+                .getDefaultSharedPreferences(this)
+                .edit();
+        editor.putString("now", null);
+        editor.putString("forecastList", null);
+        editor.putString("suggestions", null);
+        editor.putString("aqi", null);
+        editor.apply();
+        if (null != nowString) {
+            Now now = JsonUtil.handleNowResponse(nowString);
+            String weatherId = now.basic.weatherId;
         }
     }
 }

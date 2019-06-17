@@ -3,18 +3,23 @@ package com.example.classmission.json;
 import com.google.gson.annotations.SerializedName;
 
 public class Now {
+    public String status;
 
-    @SerializedName("tmp")
-    public String temperature;
+    public Nowl now;
 
-    @SerializedName("cond")
-    public More more;
+    public class Nowl{
+        @SerializedName("tmp")
+        public String temperature;
+    }
+    public Basic basic;
+    public Update update;
 
-    public class More {
-
-        @SerializedName("txt")
-        public String info;
+    public class Update {
+        @SerializedName("loc")
+        public String updateTime;
 
     }
 
+    @SerializedName("cond_txt")
+    public String info;
 }

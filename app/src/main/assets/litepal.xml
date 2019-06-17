@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <litepal>
     <dbname value="cool_weather" />
 
@@ -6,6 +7,6 @@
     <list>
         <mapping class="com.example.classmission.db.Province" />
         <mapping class="com.example.classmission.db.City" />
-        <mapping class="com.example.classmission.db.Countyii" />
+        <mapping class="com.example.classmission.db.County" />
     </list>
 </litepal>
